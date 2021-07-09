@@ -30,7 +30,7 @@
 
   // Set up initial map center and zoom level
   var map = L.map('map', {
-    //center: [41.57, -72.69], // EDIT latitude, longitude to re-center map
+    center: [41.57, -72.69], // EDIT latitude, longitude to re-center map
     zoom: 9,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
     scrollWheelZoom: false,
     tap: false
@@ -54,7 +54,7 @@
   }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
     
-    var Street = L.tileLayer('OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
