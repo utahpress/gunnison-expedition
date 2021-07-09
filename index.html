@@ -79,6 +79,9 @@
       
       marker.addTo(map);
     }
+	 marker.on('click', function(e) {
+      map.flyTo(e.latlng, 16);      
+});         
 
   });
 
